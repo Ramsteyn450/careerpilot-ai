@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerPilot AI — AI-Powered Resume Evaluation &amp; Improvement</title>
+    <!-- Standalone in-browser document processing libraries (zero external network needed) -->
+    <script>
+      window.PDFJS = window.PDFJS || {};
+      window.PDFJS.disableWorker = true;
+      window.PDFJS.workerSrc = './libs/pdf.worker.js';
+    </script>
+    <script src="./libs/pdf.js"></script>
+    <script>
+      (function() {
+        var pdf = window.pdfjsDistBuildPdf || window["pdfjs-dist/build/pdf"] || window.PDFJS;
+        if (pdf) {
+          pdf.disableWorker = true;
+          if (pdf.GlobalWorkerOptions) {
+            pdf.GlobalWorkerOptions.workerSrc = './libs/pdf.worker.js';
+          }
+          window.pdfjsLib = pdf;
+          window.PDFJS = pdf;
+        }
+      })();
+    </script>
+    <script src="./libs/mammoth.browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

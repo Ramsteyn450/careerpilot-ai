@@ -1,0 +1,23 @@
+{
+  "name": "careerpilot-ai",
+  "version": "1.0.0",
+  "description": "CareerPilot AI — Smart Resume Screening, Resume Enhancement & Job Recommendation System",
+  "scripts": {
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build:server": "npm --prefix server run build",
+    "build:client": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server run test:workflow"
+  },
+  "keywords": [
+    "resume-screening",
+    "ats-optimizer",
+    "ai-resume-builder",
+    "job-recommendation",
+    "career-intelligence"
+  ],
+  "author": "CareerPilot AI Engineering Team",
+  "license": "MIT"
+}
